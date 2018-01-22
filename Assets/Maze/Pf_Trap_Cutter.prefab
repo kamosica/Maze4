@@ -255,4 +255,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 30
-  hp: 3
+  hp: 10

@@ -24,7 +24,9 @@ public class MovetoCamera : MonoBehaviour {
         }
         if (Input.GetKey(KeyCode.A))
         {
-            gameObject.transform.position += new Vector3(-0.5f, 0, 0);
+            if (gameObject.transform.position.x >6 && gameObject.transform.position.x <= 30){
+                gameObject.transform.position += new Vector3(-0.5f, 0, 0);
+            }
         }
         if (Input.GetKey(KeyCode.S))
         {
@@ -35,7 +37,10 @@ public class MovetoCamera : MonoBehaviour {
         }
         if (Input.GetKey(KeyCode.D))
         {
-            gameObject.transform.position += new Vector3(0.5f, 0, 0);
+            if (gameObject.transform.position.x >= 6 && gameObject.transform.position.x < 30)
+            {
+                gameObject.transform.position += new Vector3(0.5f, 0, 0);
+            }
         }
         float val=Input.GetAxis("Mouse ScrollWheel");
         if (val>0.0f)

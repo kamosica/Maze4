@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33406227086576988}
   - component: {fileID: 23427718248671802}
   - component: {fileID: 111469332605980414}
+  - component: {fileID: 114612876070709438}
   m_Layer: 0
   m_Name: Pf_Trap_Fire
   m_TagString: Trap
@@ -43,7 +44,7 @@ GameObject:
   - component: {fileID: 114798250924049648}
   m_Layer: 0
   m_Name: Eff_Fire
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,6 +135,38 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1529992772048318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 241
+    i1: 223
+    i2: 146
+    i3: 213
+    i4: 152
+    i5: 171
+    i6: 165
+    i7: 228
+    i8: 202
+    i9: 236
+    i10: 124
+    i11: 199
+    i12: 240
+    i13: 121
+    i14: 197
+    i15: 71
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 0
+--- !u!114 &114612876070709438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1375818193100878}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
-public class Status : MonoBehaviour {
+public class Status : NetworkBehaviour {
     public float CharacterHP;
     [SerializeField]
     private float maxhp;
@@ -19,6 +20,8 @@ public class Status : MonoBehaviour {
     Health health;
     [SerializeField]
     private GameObject pa;
+    [SerializeField]
+    private GameObject pa2;
     private Slider HPgauge;
     private Text hptext;
 
@@ -35,16 +38,20 @@ public class Status : MonoBehaviour {
             hptext = GameObject.Find("HPText").GetComponent<Text>();
             hptext.text = (int)CharacterHP + "/" + maxhp;
         }
+        if (isLocalPlayer)
+        {
+            //UIs();
+        }
         health = Health.None;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (gameObject.tag == "Player")
-        {
-            HPgauge.value = CharacterHP;
-            hptext.text = (int)CharacterHP + "/" + maxhp;
-        }
+        //if (gameObject.tag == "Player")
+        //{
+        //    HPgauge.value = CharacterHP;
+        //    hptext.text = (int)CharacterHP + "/" + maxhp;
+        //}
         time += Time.deltaTime;
         if (time >= 15 && gameObject.tag == "Player"&&CharacterHP!=100)
         {//体力自動回復
@@ -53,6 +60,8 @@ public class Status : MonoBehaviour {
             {
                 Reg = 1.0f;
                 CharacterHP += HPReg;
+                HPgauge.value = CharacterHP;
+                hptext.text = (int)CharacterHP + "/" + maxhp;
             }
         }
         if (health==Health.Onfire||health==Health.Poizon)
@@ -68,6 +77,8 @@ public class Status : MonoBehaviour {
     {
         time = 0;
         CharacterHP -= damage;
+        HPgauge.value = CharacterHP;
+        hptext.text = (int)CharacterHP + "/" + maxhp;
     }
     public void Healing(float heal)//外的回復
     {
@@ -76,7 +87,7 @@ public class Status : MonoBehaviour {
     public void Dead()
     {
         CharacterHP = 0;
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
     float fire;
     float ti;
@@ -106,5 +117,11 @@ public class Status : MonoBehaviour {
             case Health.Poizon:
                 break;
         }
+    }
+    [Client]
+    void UIs()
+    {
+        pa.SetActive(true);
+        //pa2.SetActive(false);
     }
 }

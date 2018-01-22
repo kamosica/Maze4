@@ -31,7 +31,7 @@ public class UIControl : MonoBehaviour {
     bool s=true;
     public void OpenorClose()
     {
-        Debug.Log(s);
+        //Debug.Log(s);
         //close posx-250 open posx385
         if (s == false)//開いていない時
         {

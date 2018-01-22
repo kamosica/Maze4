@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114903689465111274}
   m_Layer: 0
   m_Name: itembox
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,3 +195,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4cf6557fc01fd046990bbf178b9e6d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flg: 0

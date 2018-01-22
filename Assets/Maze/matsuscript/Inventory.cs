@@ -16,7 +16,7 @@ public class Inventory : NetworkBehaviour {
         Needles = 5;
         Blades = 5;
         Spears = 5;
-        Fires = 0;
+        Fires = 2;
 	}
 	
 	// Update is called once per frame

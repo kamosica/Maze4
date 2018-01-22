@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Box : MonoBehaviour {
     Animator ani;
+    public bool flg;
 	// Use this for initialization
 	void Start () {
         ani=gameObject.GetComponent<Animator>();
         ani.SetBool("opened", false);
+        flg = false;
     }
 	
 	// Update is called once per frame
@@ -16,6 +18,7 @@ public class Box : MonoBehaviour {
 	}
     public void Open()
     {
+        flg = true;
         ani.SetBool("opened", true);
     }
     public void close()

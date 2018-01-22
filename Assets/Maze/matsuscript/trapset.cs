@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class trapset : NetworkBehaviour {
 
@@ -15,6 +16,7 @@ public class trapset : NetworkBehaviour {
     public GameObject NeedleTrap;
     public GameObject BladeTrap;
     public GameObject SpearTrap;
+    public GameObject FireTrap;
     private GameObject SetPrefab;
     private Vector3 clickPosition;
     [SerializeField]
@@ -32,6 +34,7 @@ public class trapset : NetworkBehaviour {
         NEEDLE,
         BLADE,
         SPEAR,
+        FIRE,
         None
     }
 
@@ -47,7 +50,7 @@ public class trapset : NetworkBehaviour {
         Needleremain = 5;
         Bladeremain = 5;
         Spearremain = 5;
-        Fireremain = 0;
+        Fireremain = 2;
         tset = Set.None;
         invent = GameObject.Find("Invents").GetComponent<Inventory>();
 	}
@@ -80,7 +83,8 @@ public class trapset : NetworkBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            Spear();
+            //Spear();
+            Fire();
         }
         //if (Input.GetMouseButtonDown(0))
         //{
@@ -94,20 +98,25 @@ public class trapset : NetworkBehaviour {
         //}
         if (Input.GetMouseButtonDown(0))
         {
-            clickPosition = Input.mousePosition;
-            clickPosition.z = 19.5f;
-            clickPosition = Camera.main.ScreenToWorldPoint(clickPosition);
-            float cx = Mathf.RoundToInt(clickPosition.x);
-            float cy = Mathf.RoundToInt(clickPosition.z);
-            clickPosition = new Vector3(cx, 0.5f, cy);
-            Debug.Log(clickPosition);
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit))
+            if (!EventSystem.current.IsPointerOverGameObject())
             {
-                if (hit.collider.tag == "Maze")
+                //return;
+
+                clickPosition = Input.mousePosition;
+                clickPosition.z = 19.5f;
+                clickPosition = Camera.main.ScreenToWorldPoint(clickPosition);
+                float cx = Mathf.RoundToInt(clickPosition.x);
+                float cy = Mathf.RoundToInt(clickPosition.z);
+                clickPosition = new Vector3(cx, 0.5f, cy);
+                Debug.Log(clickPosition);
+                RaycastHit hit;
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit))
                 {
-                    Setting();
+                    if (hit.collider.tag == "Maze")
+                    {
+                        Setting();
+                    }
                 }
             }
         }
@@ -169,6 +178,18 @@ public class trapset : NetworkBehaviour {
                     Debug.Log("在庫がありません");
                 }
                 break;
+            case Set.FIRE:
+                if (Fireremain > 0)
+                {
+                    invent.Fires -= 1;
+                    GameObject obj = Instantiate(SetPrefab, clickPosition, SetPrefab.transform.rotation);
+                    NetworkServer.Spawn(obj);
+                }
+                else
+                {
+                    Debug.Log("在庫がありません");
+                }
+                break;
             case Set.None:
                 Debug.Log("トラップを選んでください");
                 break;
@@ -193,6 +214,11 @@ public class trapset : NetworkBehaviour {
     {
         SetPrefab = SpearTrap;
         tset = Set.SPEAR;
+    }
+    public void Fire()
+    {
+        SetPrefab = FireTrap;
+        tset = Set.FIRE;
     }
     public void Supply()
     {
