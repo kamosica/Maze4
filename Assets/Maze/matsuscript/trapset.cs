@@ -21,6 +21,10 @@ public class trapset : NetworkBehaviour {
     private Vector3 clickPosition;
     [SerializeField]
     private GameObject pa;
+    public Text textcu;
+    public Text textne;
+    public Text textbl;
+    public Text textfi;
     Inventory invent;
     //public Camera ca;
     //Maze_Create Maze_scr;
@@ -53,6 +57,10 @@ public class trapset : NetworkBehaviour {
         Fireremain = 2;
         tset = Set.None;
         invent = GameObject.Find("Invents").GetComponent<Inventory>();
+        textcu.text = invent.Cutters+"";
+        textne.text = invent.Needles + "";
+        textbl.text = invent.Blades + "";
+        textfi.text = invent.Fires + "";
 	}
 	
 	// Update is called once per frame
@@ -130,6 +138,7 @@ public class trapset : NetworkBehaviour {
                 {
                     //Cutterremain -= 1;
                     invent.Cutters -= 1;
+                    textcu.text = invent.Cutters + "";
                     GameObject obj=Instantiate(SetPrefab, clickPosition, SetPrefab.transform.rotation);
                     NetworkServer.Spawn(obj);
                 }
@@ -143,6 +152,7 @@ public class trapset : NetworkBehaviour {
                 {
                     //Needleremain -= 1;
                     invent.Needles -= 1;
+                    textne.text = invent.Needles + "";
                     GameObject obj=Instantiate(SetPrefab, clickPosition, SetPrefab.transform.rotation);
                     NetworkServer.Spawn(obj);
                 }
@@ -156,6 +166,7 @@ public class trapset : NetworkBehaviour {
                 {
                     //Bladeremain -= 1;
                     invent.Blades -= 1;
+                    textbl.text = invent.Blades + "";
                     GameObject obj=Instantiate(SetPrefab, clickPosition, SetPrefab.transform.rotation);
                     NetworkServer.Spawn(obj);
                 }
@@ -182,6 +193,7 @@ public class trapset : NetworkBehaviour {
                 if (Fireremain > 0)
                 {
                     invent.Fires -= 1;
+                    textfi.text = invent.Fires + "";
                     GameObject obj = Instantiate(SetPrefab, clickPosition, SetPrefab.transform.rotation);
                     NetworkServer.Spawn(obj);
                 }
