@@ -24,6 +24,8 @@ public class Code_Input : NetworkBehaviour
 
     public GameObject Seikou_Img;
 
+    public GameObject Enter_txt;
+
     public GameObject Fade_Img;
 
     [SyncVar]
@@ -155,6 +157,9 @@ public class Code_Input : NetworkBehaviour
         Seikou_Img = GameObject.Find("Seikou");
         iTween.MoveTo(Seikou_Img, iTween.Hash("y", 0.0f, "time", 5.0f, "isLocal", true));
         //Debug.Log("SEIKAI");
+
+        Enter_txt = GameObject.Find("Enter");
+        iTween.MoveTo(Enter_txt, iTween.Hash("y", -170.0f, "time", 5.0f, "isLocal", true));
 
         //フェードイン
         GameObject fade_obj = GameObject.Find("FadeManager");

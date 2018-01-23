@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class Number_Create : NetworkBehaviour
 {
@@ -64,7 +65,7 @@ public class Number_Create : NetworkBehaviour
 	// Update is called once per frame
 	void Update () {
 
-        
+
 
         //Debug.Log("isClear " + isClear);
         //isClear++;
@@ -72,8 +73,13 @@ public class Number_Create : NetworkBehaviour
         {
             Clear();
             //isClear = 2;
-        }
 
+            //Enterキーを押したらタイトルへ戻る
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                SceneManager.LoadScene("Title");
+            }
+        }
         //ButtonEnter();
     }
 
@@ -186,6 +192,10 @@ public class Number_Create : NetworkBehaviour
         GameObject Seikou_Img = GameObject.Find("Seikou");
         iTween.MoveTo(Seikou_Img, iTween.Hash("y", 0.0f, "time", 5.0f, "isLocal", true));
         //Debug.Log("SEIKAI");
+
+
+        GameObject Enter_txt = GameObject.Find("Enter");
+        iTween.MoveTo(Enter_txt, iTween.Hash("y", -170.0f, "time", 5.0f, "isLocal", true));
 
         //フェードイン
         GameObject fade_obj = GameObject.Find("FadeManager");
