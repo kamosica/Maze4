@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/shooting/vs.unity
     guid: b311d6d8e4faef944b84077df9bf4bed
   - enabled: 1
+    path: Assets/Title.unity
+    guid: 082ce0d2d147ba94cb76722300961a8d
+  - enabled: 1
     path: Assets/maze_main.unity
     guid: 41a111d798662364e8459c5b5cdf1d28
   - enabled: 0
