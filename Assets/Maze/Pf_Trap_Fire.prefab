@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0.4
-  hp: 3
+  hp: 100
 --- !u!198 &198042355566248734
 ParticleSystem:
   m_ObjectHideFlags: 1
