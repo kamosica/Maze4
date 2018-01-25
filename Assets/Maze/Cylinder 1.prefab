@@ -94,6 +94,8 @@ GameObject:
   - component: {fileID: 114063301016118846}
   - component: {fileID: 114029127534049074}
   - component: {fileID: 114463071478703392}
+  - component: {fileID: 114255274557896594}
+  - component: {fileID: 114570602233589600}
   m_Layer: 0
   m_Name: Cylinder 1
   m_TagString: Player
@@ -584,6 +586,21 @@ MonoBehaviour:
   m_SnapThreshold: 5
   m_InterpolateRotation: 1
   m_InterpolateMovement: 1
+--- !u!114 &114255274557896594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1694074638330936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84f9047530eae264a8041dcf4e68116b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CharacterHP: 0
+  maxhp: 0
+  pa: {fileID: 0}
+  pa2: {fileID: 0}
 --- !u!114 &114308905757207132
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -631,6 +648,18 @@ MonoBehaviour:
   Mondai_prefab: {fileID: 1020890362660070, guid: d51ea6d52ed270943befae071acab556,
     type: 2}
   Mondai_obj: {fileID: 0}
+--- !u!114 &114570602233589600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1694074638330936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94555a2ce1d9f3408eef1cade6fd539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerLight: {fileID: 1486400782427248}
 --- !u!114 &114935249347694350
 MonoBehaviour:
   m_ObjectHideFlags: 1

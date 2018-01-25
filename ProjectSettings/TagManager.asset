@@ -7,6 +7,11 @@ TagManager:
   - Trap
   - Mondai
   - Camera
+  - AngouCanvas
+  - Code
+  - Maze
+  - Door
+  - Enemy
   layers:
   - Default
   - TransparentFX

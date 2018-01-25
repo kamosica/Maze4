@@ -50,7 +50,7 @@ public class Door_Collider : NetworkBehaviour
     [Command]
     void CmdCreateMondai()
     {
-        Debug.Log("Mondai");
+        //Debug.Log("Mondai");
         GameObject obj = (GameObject)Instantiate(Mondai_prefab, new Vector3(0.0f,0.0f,0.0f), new Quaternion(0.0f,0.0f,0.0f,0.0f));
         obj.transform.parent = Angou_Menu.transform;
         obj.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
@@ -65,6 +65,6 @@ public class Door_Collider : NetworkBehaviour
         PosY = y;
         Mondai_obj.transform.localPosition = new Vector3(0.0f, PosY, 0.0f);
 
-        Debug.Log("Cmdset");
+        //Debug.Log("Cmdset");
     }
 }
