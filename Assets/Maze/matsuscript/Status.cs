@@ -25,6 +25,10 @@ public class Status : NetworkBehaviour {
     private Slider HPgauge;
     private Text hptext;
 
+    public Image life1;
+    public Image life2;
+    public Image life3;
+
     // Use this for initialization
     void Start () {
         HPReg = 1;
@@ -32,11 +36,11 @@ public class Status : NetworkBehaviour {
         {
             CharacterHP = maxhp;
             //pa.SetActive(false);
-            HPgauge = GameObject.Find("HP").GetComponent<Slider>();
-            HPgauge.value = CharacterHP;
-            HPgauge.maxValue = maxhp;
-            hptext = GameObject.Find("HPText").GetComponent<Text>();
-            hptext.text = (int)CharacterHP + "/" + maxhp;
+            //HPgauge = GameObject.Find("HP").GetComponent<Slider>();
+            //HPgauge.value = CharacterHP;
+            //HPgauge.maxValue = maxhp;
+            //hptext = GameObject.Find("HPText").GetComponent<Text>();
+            //hptext.text = (int)CharacterHP + "/" + maxhp;
         }
         if (isLocalPlayer)
         {
@@ -59,9 +63,9 @@ public class Status : NetworkBehaviour {
             if (Reg <= 0.0)
             {
                 Reg = 1.0f;
-                CharacterHP += HPReg;
-                HPgauge.value = CharacterHP;
-                hptext.text = (int)CharacterHP + "/" + maxhp;
+                //CharacterHP += HPReg;
+                //HPgauge.value = CharacterHP;
+               // hptext.text = (int)CharacterHP + "/" + maxhp;
             }
         }
         if (health==Health.Onfire||health==Health.Poizon)
@@ -76,9 +80,21 @@ public class Status : NetworkBehaviour {
     public void Damages(float damage)
     {
         time = 0;
-        CharacterHP -= damage;
-        HPgauge.value = CharacterHP;
-        hptext.text = (int)CharacterHP + "/" + maxhp;
+        CharacterHP -= 1;//damage
+        //HPgauge.value = CharacterHP;
+        //hptext.text = (int)CharacterHP + "/" + maxhp;
+        if (CharacterHP == 2)
+        {
+            life3.color = Color.black;
+        }
+        if (CharacterHP == 1)
+        {
+            life2.color = Color.black;
+        }
+        if (CharacterHP == 0)
+        {
+            life1.color = Color.black;
+        }
     }
     public void Healing(float heal)//外的回復
     {

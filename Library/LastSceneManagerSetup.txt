@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/maze_main.unity
-  isLoaded: 1
-  isActive: 1
