@@ -19,7 +19,7 @@ Platform assembly: C:\Users\root\Documents\GitHub\Maze4\Maze_Data\Managed\UnityE
 Loading C:\Users\root\Documents\GitHub\Maze4\Maze_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\root\Documents\GitHub\Maze4\Maze_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\root\Documents\GitHub\Maze4\Maze_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.415 seconds
+- Completed reload, in  0.408 seconds
 Platform assembly: C:\Users\root\Documents\GitHub\Maze4\Maze_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\root\Documents\GitHub\Maze4\Maze_Data\Managed\System.dll (this message is harmless)
 OnLevelWasLoaded was found on NetworkManager_Custom
@@ -32,10 +32,14 @@ desktop: 2560x1440 59Hz; virtual: 2560x1440 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 2.237038 ms
+UnloadTime: 2.743975 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1dcc -> priority: 1 
-  Thread -> id: 2144 -> priority: 1 
+  Thread -> id: 29cc -> priority: 1 
+  Thread -> id: 2880 -> priority: 1 
+The prefab 'Pf_Trap_Fire' has multiple NetworkIdentity components. There can only be one NetworkIdentity on a prefab, and it must be on the root object.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
 Network configuration mismatch detected. The number of networked scripts on the client does not match the number of networked scripts on the server. This could be caused by lazy loading of scripts on the client. This warning can be disabled by the checkbox in NetworkManager Script CRC Check.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
@@ -68,11 +72,15 @@ CRC Remote Dump EnemyGenerator : 0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 10.532332 ms
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 8.294847 ms
+The prefab 'Pf_Trap_Fire' has multiple NetworkIdentity components. There can only be one NetworkIdentity on a prefab, and it must be on the root object.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3542.
-Total: 2.019716 ms (FindLiveObjects: 0.270425 ms CreateObjectMapping: 0.150385 ms MarkObjects: 1.560527 ms  DeleteObjects: 0.037931 ms)
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3934.
+Total: 3.785071 ms (FindLiveObjects: 0.446693 ms CreateObjectMapping: 0.282920 ms MarkObjects: 3.012616 ms  DeleteObjects: 0.042393 ms)
 
 Trying to send command for object without authority.
  
@@ -103,37 +111,22 @@ X35 Z1.166667
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 NullReferenceException: Object reference not set to an instance of an object
-  at Status.Start () [0x00000] in <filename unknown>:0 
+  at Damage.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
-PlayerHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
 NullReferenceException: Object reference not set to an instance of an object
-  at Status.Damages (Single damage) [0x00000] in <filename unknown>:0 
-  at PlayerDamage.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
+  at Damage.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
-PlayerHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
 NullReferenceException: Object reference not set to an instance of an object
-  at Status.Damages (Single damage) [0x00000] in <filename unknown>:0 
-  at PlayerDamage.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
+  at Damage.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
-PlayerHit
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
 NullReferenceException: Object reference not set to an instance of an object
-  at Status.Damages (Single damage) [0x00000] in <filename unknown>:0 
-  at PlayerDamage.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
+  at Damage.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 

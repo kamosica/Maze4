@@ -139,7 +139,7 @@ public class trapset : NetworkBehaviour {
                     //Cutterremain -= 1;
                     invent.Cutters -= 1;
                     textcu.text = invent.Cutters + "";
-                    GameObject obj=Instantiate(SetPrefab, clickPosition, SetPrefab.transform.rotation);
+                    GameObject obj= (GameObject)Instantiate(SetPrefab, clickPosition, SetPrefab.transform.rotation);
                     NetworkServer.Spawn(obj);
                 }
                 else
@@ -153,7 +153,7 @@ public class trapset : NetworkBehaviour {
                     //Needleremain -= 1;
                     invent.Needles -= 1;
                     textne.text = invent.Needles + "";
-                    GameObject obj=Instantiate(SetPrefab, clickPosition, SetPrefab.transform.rotation);
+                    GameObject obj= (GameObject)Instantiate(SetPrefab, clickPosition, SetPrefab.transform.rotation);
                     NetworkServer.Spawn(obj);
                 }
                 else
@@ -167,7 +167,7 @@ public class trapset : NetworkBehaviour {
                     //Bladeremain -= 1;
                     invent.Blades -= 1;
                     textbl.text = invent.Blades + "";
-                    GameObject obj=Instantiate(SetPrefab, clickPosition, SetPrefab.transform.rotation);
+                    GameObject obj= (GameObject)Instantiate(SetPrefab, clickPosition, SetPrefab.transform.rotation);
                     NetworkServer.Spawn(obj);
                 }
                 else
@@ -181,7 +181,7 @@ public class trapset : NetworkBehaviour {
                     //Spearremain -= 1;
                     invent.Spears -= 1;
                     clickPosition.y = 1f;
-                    GameObject obj=Instantiate(SetPrefab, clickPosition, SetPrefab.transform.rotation);
+                    GameObject obj= (GameObject)Instantiate(SetPrefab, clickPosition, SetPrefab.transform.rotation);
                     NetworkServer.Spawn(obj);
                 }
                 else
@@ -194,7 +194,7 @@ public class trapset : NetworkBehaviour {
                 {
                     invent.Fires -= 1;
                     textfi.text = invent.Fires + "";
-                    GameObject obj = Instantiate(SetPrefab, clickPosition, SetPrefab.transform.rotation);
+                    GameObject obj = (GameObject)Instantiate(SetPrefab, clickPosition, SetPrefab.transform.rotation);
                     NetworkServer.Spawn(obj);
                 }
                 else

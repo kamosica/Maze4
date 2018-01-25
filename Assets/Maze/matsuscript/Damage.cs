@@ -35,7 +35,7 @@ public class Damage : NetworkBehaviour {
 	}
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Player" )
         {
             Status stat = other.gameObject.GetComponent<Status>();
             stat.Damages(damage);
