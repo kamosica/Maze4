@@ -37,8 +37,22 @@ public class Damage : NetworkBehaviour {
     {
         if (other.gameObject.tag == "Player" )
         {
-            Status stat = other.gameObject.GetComponent<Status>();
-            stat.Damages(damage);
+            //Status stat = other.gameObject.GetComponent<Status>();
+            //stat.Damages(damage);
+            hp -= 1;
+        }
+        else if(other.gameObject.tag == "Enemy")
+        {
+            Debug.Log("EnemyHit");
+            EnemyDamage e_dmg = other.gameObject.GetComponent<EnemyDamage>();
+
+
+            if (e_dmg.MutekiTimer > 0.0f) return;
+         
+            e_dmg.EnemyHP--;
+            e_dmg.MutekiTimer = 1.0f;
+            
+
             hp -= 1;
         }
     }

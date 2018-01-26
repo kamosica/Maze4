@@ -44,25 +44,56 @@ public class PlayerDamage : MonoBehaviour {
         else
         {
             PlayerLight.GetComponent<Light>().intensity = 4;
+            
         }
         this.Damageimg.color = Color.Lerp(this.Damageimg.color, Color.clear, Time.deltaTime);
+        if(Damageimg.color == Color.clear)
+        {
+            Damageimg.transform.localPosition = new Vector3(0.0f, 1000.0f, 0.0f);
+        }
 
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (MutekiTimer > 0.0f) return;
-        if(other.gameObject.tag == "Enemy")
+        if(other.gameObject.tag == "Enemy" || other.gameObject.tag == "Trap")
         {
             Damage();
             Debug.Log("PlayerHit");
             status_scr.Damages(1.0f);
             MutekiTimer = MutekiTime;
+            Damageimg.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
+
+            if(status_scr.CharacterHP == 0)
+            {
+                GameOver();
+            }
         }
     }
 
     void Damage()
     {
         this.Damageimg.color = new Color(0.5f, 0f, 0f, 0.5f);
+    }
+
+    void GameOver()
+    {
+        GameObject Sippai_Img = GameObject.Find("Sippai");
+        iTween.MoveTo(Sippai_Img, iTween.Hash("y", 0.0f, "time", 5.0f, "isLocal", true));
+        //Debug.Log("SEIKAI");
+
+
+        GameObject Enter_txt = GameObject.Find("Enter");
+        iTween.MoveTo(Enter_txt, iTween.Hash("y", -170.0f, "time", 5.0f, "isLocal", true));
+
+        //フェードイン
+        GameObject fade_obj = GameObject.Find("FadeManager");
+        FadeManager fade = fade_obj.GetComponent<FadeManager>();
+        GameObject Fade_Img = GameObject.Find("FadeImage");
+        Fade_Img.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
+        fade.FadeImage = Fade_Img.GetComponent<Image>();
+        fade.enableFade = true;
+        fade.enableFadeOut = true;
     }
 }

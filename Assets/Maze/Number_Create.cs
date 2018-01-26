@@ -199,6 +199,7 @@ public class Number_Create : NetworkBehaviour
 
         //フェードイン
         GameObject fade_obj = GameObject.Find("FadeManager");
+        fade_obj.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
         FadeManager fade = fade_obj.GetComponent<FadeManager>();
         GameObject Fade_Img = GameObject.Find("FadeImage");
         fade.FadeImage = Fade_Img.GetComponent<Image>();
