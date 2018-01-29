@@ -47,6 +47,11 @@ public class Number_Create : NetworkBehaviour
     [SyncVar]
     public int isClear = 0;
 
+
+    public AudioClip audioClip1;
+
+    private AudioSource audioSource;
+
     // Use this for initialization
     void Start () {
 
@@ -202,6 +207,7 @@ public class Number_Create : NetworkBehaviour
         fade_obj.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
         FadeManager fade = fade_obj.GetComponent<FadeManager>();
         GameObject Fade_Img = GameObject.Find("FadeImage");
+        Fade_Img.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
         fade.FadeImage = Fade_Img.GetComponent<Image>();
         fade.enableFade = true;
         fade.enableFadeOut = true;

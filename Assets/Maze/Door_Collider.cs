@@ -31,7 +31,7 @@ public class Door_Collider : NetworkBehaviour
     {
         if (other.gameObject.tag == "Door")
         {
-            if (Input.GetKeyDown(KeyCode.X))
+            if (Input.GetMouseButtonDown(0))
             {
                 Debug.Log("ANGOU");
                 Cmdsetactive(130.0f);

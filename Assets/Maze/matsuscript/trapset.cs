@@ -32,6 +32,11 @@ public class trapset : NetworkBehaviour {
     //int pos_X = 0;
     //int pos_Y = 0;
     Set tset;
+
+    public AudioClip audioClip1;
+
+    private AudioSource audioSource;
+
     enum Set
     {
         CUTTER,
@@ -126,6 +131,10 @@ public class trapset : NetworkBehaviour {
                         Setting();
                     }
                 }
+
+                audioSource = gameObject.GetComponent<AudioSource>();
+                audioSource.clip = audioClip1;
+                audioSource.Play();
             }
         }
     }

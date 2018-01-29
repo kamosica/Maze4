@@ -31,6 +31,11 @@ public class Code_Input : NetworkBehaviour
     [SyncVar]
     public int isClear = 0;
 
+    public AudioClip audioClip1;
+    public AudioClip audioClip2;
+
+    private AudioSource audioSource;
+
     // Use this for initialization
     void Start () {
         Number_Create_obj = GameObject.FindGameObjectWithTag("Code");
@@ -138,10 +143,19 @@ public class Code_Input : NetworkBehaviour
         {
             Number_Create_scr.ButtonEnter();
             transform.localPosition = new Vector3(0.0f, 1300.0f, 0.0f);
+
+            audioSource = gameObject.GetComponent<AudioSource>();
+            audioSource.clip = audioClip1;
+            audioSource.Play();
+
         }
         else
         {
             iTween.ShakePosition(gameObject, iTween.Hash("x", 5.0f, "y", 5.0f, "time", 0.5f));
+
+            audioSource = gameObject.GetComponent<AudioSource>();
+            audioSource.clip = audioClip2;
+            audioSource.Play();
         }
     }
 

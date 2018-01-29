@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: c652c5b50f271154ab6c3498c37bcb6b
+timeCreated: 1517199013
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: HGMinchoE
+  fontNames:
+  - HGMinchoE
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

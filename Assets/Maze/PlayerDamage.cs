@@ -13,6 +13,10 @@ public class PlayerDamage : MonoBehaviour {
     public GameObject PlayerLight;
     private int _frame = 0;
 
+    public AudioClip audioClip_Damage;
+    public AudioClip audioClip_GameOver;
+    private AudioSource audioSource;
+
     // Use this for initialization
     void Start () {
         status_scr = gameObject.GetComponent<Status>();
@@ -65,9 +69,17 @@ public class PlayerDamage : MonoBehaviour {
             MutekiTimer = MutekiTime;
             Damageimg.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
 
-            if(status_scr.CharacterHP == 0)
+            audioSource = gameObject.GetComponent<AudioSource>();
+            audioSource.clip = audioClip_Damage;
+            audioSource.Play();
+
+            if (status_scr.CharacterHP == 0)
             {
                 GameOver();
+
+                audioSource = gameObject.GetComponent<AudioSource>();
+                audioSource.clip = audioClip_GameOver;
+                audioSource.Play();
             }
         }
     }

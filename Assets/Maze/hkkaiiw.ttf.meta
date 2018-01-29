@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: bf360eb6b7cc4394690216b8cb5ef212
+timeCreated: 1517198208
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: HakusyuKaisyoOiwai
+  fontNames:
+  - HakusyuKaisyoOiwai
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
