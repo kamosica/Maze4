@@ -12,6 +12,8 @@ TagManager:
   - Maze
   - Door
   - Enemy
+  - Box
+  - Pin
   layers:
   - Default
   - TransparentFX
