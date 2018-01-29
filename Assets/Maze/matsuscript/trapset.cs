@@ -37,6 +37,10 @@ public class trapset : NetworkBehaviour {
 
     private AudioSource audioSource;
 
+    private Vector3 position;
+    private Vector3 screenToWorldPointPosition;
+    public GameObject pins;
+
     enum Set
     {
         CUTTER,
@@ -135,6 +139,27 @@ public class trapset : NetworkBehaviour {
                 audioSource = gameObject.GetComponent<AudioSource>();
                 audioSource.clip = audioClip1;
                 audioSource.Play();
+            }
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            position = Input.mousePosition;
+            // Z軸修正
+            position.z = 10f;
+            // マウス位置座標をスクリーン座標からワールド座標に変換する
+            screenToWorldPointPosition = Camera.main.ScreenToWorldPoint(position);
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.collider.tag == "Pin")
+                {
+                    Destroy(hit.collider.gameObject);
+                }
+                else
+                {
+                    GameObject pin = Instantiate(pins, screenToWorldPointPosition, pins.transform.rotation);
+                }
             }
         }
     }

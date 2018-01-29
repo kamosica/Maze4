@@ -17,6 +17,7 @@ public class PlayerDamage : MonoBehaviour {
     public AudioClip audioClip_GameOver;
     private AudioSource audioSource;
 
+
     // Use this for initialization
     void Start () {
         status_scr = gameObject.GetComponent<Status>();

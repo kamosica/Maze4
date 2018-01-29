@@ -6105,6 +6105,7 @@ MonoBehaviour:
   textbl: {fileID: 1914599253}
   textfi: {fileID: 1914599252}
   audioClip1: {fileID: 8300000, guid: f5eb318737bfabf44bd594860ee40477, type: 3}
+  pins: {fileID: 1844854837184712, guid: 8ff85ea6c1b4d9340829770b75ff8880, type: 2}
 --- !u!114 &1561124670
 MonoBehaviour:
   m_ObjectHideFlags: 0

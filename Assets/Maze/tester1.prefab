@@ -468,7 +468,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -651,6 +651,10 @@ MonoBehaviour:
   CharacterHP: 100
   maxhp: 100
   pa: {fileID: 0}
+  pa2: {fileID: 0}
+  life1: {fileID: 0}
+  life2: {fileID: 0}
+  life3: {fileID: 0}
 --- !u!136 &136782912213464576
 CapsuleCollider:
   m_ObjectHideFlags: 1
