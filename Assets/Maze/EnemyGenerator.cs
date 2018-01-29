@@ -9,7 +9,7 @@ public class EnemyGenerator : NetworkBehaviour
     public GameObject [] Enemy_prefab = new GameObject[4];
 
     int Max_Enemy = 8;
-    float Wave_Time = 15.0f;
+    float Wave_Time = 23.0f;
     float w_timer;
 
     // Use this for initialization

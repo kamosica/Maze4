@@ -10,6 +10,7 @@ public class Door_Collider : NetworkBehaviour
     public GameObject Mondai_prefab;
 
     public GameObject Mondai_obj;
+    public GameObject Mondai_Player;
 
     [SyncVar]
     float PosY = 1300.0f;
@@ -35,6 +36,7 @@ public class Door_Collider : NetworkBehaviour
             {
                 Debug.Log("ANGOU");
                 Cmdsetactive(130.0f);
+                Mondai_Player.SetActive(true);
             }
         }
     }
@@ -44,6 +46,7 @@ public class Door_Collider : NetworkBehaviour
         if (other.gameObject.tag == "Door")
         {
             Cmdsetactive(1300.0f);
+            Mondai_Player.SetActive(false);
         }
     }
 

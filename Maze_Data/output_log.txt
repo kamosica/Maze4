@@ -19,7 +19,7 @@ Platform assembly: C:\Users\root\Documents\GitHub\Maze4\Maze_Data\Managed\UnityE
 Loading C:\Users\root\Documents\GitHub\Maze4\Maze_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\root\Documents\GitHub\Maze4\Maze_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\root\Documents\GitHub\Maze4\Maze_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.566 seconds
+- Completed reload, in  0.482 seconds
 Platform assembly: C:\Users\root\Documents\GitHub\Maze4\Maze_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\root\Documents\GitHub\Maze4\Maze_Data\Managed\System.dll (this message is harmless)
 OnLevelWasLoaded was found on NetworkManager_Custom
@@ -32,10 +32,10 @@ desktop: 2560x1440 59Hz; virtual: 2560x1440 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.998745 ms
+UnloadTime: 1.891645 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: fa4 -> priority: 1 
-  Thread -> id: 21ec -> priority: 1 
+  Thread -> id: 734 -> priority: 1 
+  Thread -> id: f5c -> priority: 1 
 The prefab 'Pf_Trap_Fire' has multiple NetworkIdentity components. There can only be one NetworkIdentity on a prefab, and it must be on the root object.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
@@ -48,32 +48,39 @@ CRC Local Dump FirstPersonController : 0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-InvalidOperationException: out of sync
-  at System.Collections.Generic.Dictionary`2+Enumerator[System.String,System.Int32].VerifyState () [0x00000] in <filename unknown>:0 
-  at System.Collections.Generic.Dictionary`2+Enumerator[System.String,System.Int32].MoveNext () [0x00000] in <filename unknown>:0 
-  at System.Collections.Generic.Dictionary`2+KeyCollection+Enumerator[System.String,System.Int32].MoveNext () [0x00000] in <filename unknown>:0 
-  at UnityEngine.Networking.NetworkCRC.Dump (UnityEngine.Networking.NetworkSystem.CRCMessageEntry[] remoteScripts) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Networking.NetworkCRC.ValidateInternal (UnityEngine.Networking.NetworkSystem.CRCMessageEntry[] remoteScripts, Int32 numChannels) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Networking.NetworkCRC.Validate (UnityEngine.Networking.NetworkSystem.CRCMessageEntry[] scripts, Int32 numChannels) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Networking.NetworkClient.OnCRC (UnityEngine.Networking.NetworkMessage netMsg) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Networking.NetworkConnection.HandleReader (UnityEngine.Networking.NetworkReader reader, Int32 receivedSize, Int32 channelId) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Networking.NetworkConnection.HandleBytes (System.Byte[] buffer, Int32 receivedSize, Int32 channelId) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Networking.NetworkConnection.TransportReceive (System.Byte[] bytes, Int32 numBytes, Int32 channelId) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Networking.NetworkClient.Update () [0x00000] in <filename unknown>:0 
-  at UnityEngine.Networking.NetworkClient.UpdateClients () [0x00000] in <filename unknown>:0 
-  at UnityEngine.Networking.NetworkIdentity.UNetStaticUpdate () [0x00000] in <filename unknown>:0 
+CRC Local Dump hira_shot : 0
  
-(Filename:  Line: -1)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-UnloadTime: 10.777782 ms
+CRC Local Dump Door_Collider : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+CRC Remote Dump hira_shot : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+CRC Remote Dump FirstPersonController : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+CRC Remote Dump Door_Collider : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+CRC Remote Dump EnemyGenerator : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 10.250764 ms
 The prefab 'Pf_Trap_Fire' has multiple NetworkIdentity components. There can only be one NetworkIdentity on a prefab, and it must be on the root object.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 4034.
-Total: 9.155671 ms (FindLiveObjects: 0.582799 ms CreateObjectMapping: 0.266410 ms MarkObjects: 6.075667 ms  DeleteObjects: 2.229901 ms)
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 4102.
+Total: 5.509378 ms (FindLiveObjects: 0.538621 ms CreateObjectMapping: 0.288276 ms MarkObjects: 3.104994 ms  DeleteObjects: 1.576148 ms)
 
 Trying to send command for object without authority.
  
@@ -115,7 +122,63 @@ ANGOU
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-X35 Z1
+ANGOU
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ANGOU
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ANGOU
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ANGOU
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ANGOU
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ANGOU
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Trying to send command for object without authority.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ANGOU
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ANGOU
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ANGOU
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ANGOU
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ANGOU
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+ANGOU
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+PlayerHit
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -127,26 +190,31 @@ Trying to send command for object without authority.
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Log: connection {1} has been disconnected by timeout; address {::ffff:127.0.0.1:7777} time {66090}, last rec time {63592} rtt {12} timeout {2000}
-ClientDisconnected due to error: Timeout
+PlayerHit
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.616478 ms
-NullReferenceException: Object reference not set to an instance of an object
-  at NetworkManager_Custom.SetupMenuSceneButtons () [0x00000] in <filename unknown>:0 
-  at NetworkManager_Custom.OnLevelWasLoaded (Int32 level) [0x00000] in <filename unknown>:0 
+EnemyHit
  
-(Filename:  Line: -1)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-NullReferenceException: Object reference not set to an instance of an object
-  at NetworkManager_Custom.SetupMenuSceneButtons () [0x00000] in <filename unknown>:0 
-  at NetworkManager_Custom.OnLevelWasLoaded (Int32 level) [0x00000] in <filename unknown>:0 
+EnemyHit
  
-(Filename:  Line: -1)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
+EnemyHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Unloading 105 unused Assets to reduce memory usage. Loaded Objects now: 1029.
-Total: 2.021057 ms (FindLiveObjects: 0.083448 ms CreateObjectMapping: 0.228925 ms MarkObjects: 1.219596 ms  DeleteObjects: 0.488195 ms)
+EnemyHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EnemyHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+EnemyHit
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 

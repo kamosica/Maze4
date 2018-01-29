@@ -73,7 +73,7 @@ public class PlayerDamage : MonoBehaviour {
             audioSource.clip = audioClip_Damage;
             audioSource.Play();
 
-            if (status_scr.CharacterHP == 0)
+            if (status_scr.CharacterHP < 1)
             {
                 GameOver();
 
