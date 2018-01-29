@@ -31,4 +31,19 @@ public class textlog : MonoBehaviour {
     {
         maltilog.text = message[0];
     }
+    public void notification(int s)
+    {
+        switch (s)
+        {
+            case 1:
+                maltilog.text = message[0];
+                break;
+            case 2:
+                maltilog.text = message[1];
+                break;
+            case 3:
+                maltilog.text = message[2];
+                break;
+        }
+    }
 }
